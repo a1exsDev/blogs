@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#override {
+  padding: 0,0,0,0;
+}
+
 @layer base {
   :root,
   html[data-theme="light"] {
