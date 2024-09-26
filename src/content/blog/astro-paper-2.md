@@ -56,7 +56,7 @@ The following frontmatter properties are renamed.
 
 ### Default Tag for blog post
 
-If a blog post doesn't have any tag (in other words, frontmatter property `tags` is not specified), the default tag `others` will be used for that blog post. But you can set the default tag in the `/src/content/_schemas.ts` file.
+If a blog post doesn't have any tag (in other words, frontmatter property `tags` is not specified), the default tag `others` will be used for that blog post. But you can set the default tag in the `/blogs/src/content/_schemas.ts` file.
 
 ```ts
 // src/contents/_schemas.ts

@@ -85,11 +85,11 @@ In this release, a lot of changes have been made\_ replacing old Astro APIs with
 
 It's important to keep all the files which have been already updated. These files include
 
-- `/src/config.ts` (didn't touch in v3)
-- `/src/styles/base.css` (minor changes in v3; mentioned below)
-- `/src/assets/` (didn't touch in v3)
-- `/public/assets/` (didn't touch in v3)
-- `/content/blog/` (it's your blog content directory 🤷🏻‍♂️)
+- `/blogs/src/config.ts` (didn't touch in v3)
+- `/blogs/src/styles/base.css` (minor changes in v3; mentioned below)
+- `/blogs/src/assets/` (didn't touch in v3)
+- `/blogs/public/assets/` (didn't touch in v3)
+- `/blogs/content/blog/` (it's your blog content directory 🤷🏻‍♂️)
 - Any other customizations you've made.
 
 ```css
@@ -128,9 +128,9 @@ In this step, replace everything\_ except above files/directories (plus your cus
 
 **_Step 3: Schema Updates_**
 
-Keep in mind that `/src/content/_schemas.ts` has been replaced with `/src/content/config.ts`.
+Keep in mind that `/blogs/src/content/_schemas.ts` has been replaced with `/blogs/src/content/config.ts`.
 
-Besides, there is no longer `BlogFrontmatter` type exported from `/src/content/config.ts`.
+Besides, there is no longer `BlogFrontmatter` type exported from `/blogs/src/content/config.ts`.
 
 Therefore, all the `BlogFrontmatter` type inside files need to be updated with `CollectionEntry<"blog">["data"]`.
 

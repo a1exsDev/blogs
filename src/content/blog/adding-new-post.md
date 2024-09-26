@@ -47,7 +47,7 @@ Title and description (excerpt) are important for search engine optimization (SE
 
 For example, if the blog file name is `adding-new-post.md` and you don't specify the slug in your frontmatter, Astro will automatically create a slug for the blog post using the file name. Thus, the slug will be `adding-new-post`. But if you specify the `slug` in the frontmatter, this will override the default slug. You can read more about this in [Astro Docs](https://docs.astro.build/en/guides/content-collections/#defining-custom-slugs).
 
-If you omit `tags` in a blog post (in other words, if no tag is specified), the default tag `others` will be used as a tag for that post. You can set the default tag in the `/src/content/config.ts` file.
+If you omit `tags` in a blog post (in other words, if no tag is specified), the default tag `others` will be used as a tag for that post. You can set the default tag in the `/blogs/src/content/config.ts` file.
 
 ```ts
 // src/content/config.ts
@@ -120,7 +120,7 @@ You can store images inside `src/assets/` directory. These images will be automa
 
 You can use relative path or alias path (`@assets/`) to serve these images.
 
-Example: Suppose you want to display `example.jpg` whose path is `/src/assets/images/example.jpg`.
+Example: Suppose you want to display `example.jpg` whose path is `/blogs/src/assets/images/example.jpg`.
 
 ```md
 ![something](@assets/images/example.jpg)
@@ -142,7 +142,7 @@ You can store images inside the `public` directory. Keep in mind that images sto
 
 For these images, you should use an absolute path; and these images can be displayed using [markdown annotation](https://www.markdownguide.org/basic-syntax/#images-1) or [HTML img tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img).
 
-Example: Assume `example.jpg` is located at `/public/assets/images/example.jpg`.
+Example: Assume `example.jpg` is located at `/blogs/public/assets/images/example.jpg`.
 
 ```md
 ![something](/assets/images/example.jpg)

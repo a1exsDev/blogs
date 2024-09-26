@@ -131,7 +131,7 @@ const getPostsWithRT = async (posts: CollectionEntry<"blog">[]) => {
 export default getPostsWithRT;
 ```
 
-Step (6) Refactor `getStaticPaths` of `/src/pages/posts/[slug]/index.astro` as the following
+Step (6) Refactor `getStaticPaths` of `/blogs/src/pages/posts/[slug]/index.astro` as the following
 
 ```ts
 ---
