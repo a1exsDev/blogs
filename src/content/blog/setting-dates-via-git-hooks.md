@@ -52,13 +52,13 @@ while read _ file; do
   draft=$(echo "$frontmatter" | awk '/^draft: /{print $2}')
   if [ "$draft" = "false" ]; then
     echo "$file modDateTime updated"
-    cat $file | sed "/blogs/---.*/,/---.*/s/^modDatetime:.*$/modDatetime: $(date -u "+%Y-%m-%dT%H:%M:%SZ")/" > tmp
+    cat $file | sed "/---.*/,/---.*/s/^modDatetime:.*$/modDatetime: $(date -u "+%Y-%m-%dT%H:%M:%SZ")/" > tmp
     mv tmp $file
     git add $file
   fi
   if [ "$draft" = "first" ]; then
     echo "First release of $file, draft set to false and modDateTime removed"
-    cat $file | sed "/blogs/---.*/,/---.*/s/^modDatetime:.*$/modDatetime:/" | sed "/blogs/---.*/,/---.*/s/^draft:.*$/draft: false/" > tmp
+    cat $file | sed "/---.*/,/---.*/s/^modDatetime:.*$/modDatetime:/" | sed "/---.*/,/---.*/s/^draft:.*$/draft: false/" > tmp
     mv tmp $file
     git add $file
   fi
@@ -114,7 +114,7 @@ Adding the date for a new file is the same process as above, but this time we ar
 ```shell
 # New files, add/update the pubDatetime
 git diff --cached --name-status | egrep -i "^(A).*\.(md)$" | while read a b; do
-  cat $b | sed "/blogs/---.*/,/---.*/s/^pubDatetime:.*$/pubDatetime: $(date -u "+%Y-%m-%dT%H:%M:%SZ")/" > tmp
+  cat $b | sed "/---.*/,/---.*/s/^pubDatetime:.*$/pubDatetime: $(date -u "+%Y-%m-%dT%H:%M:%SZ")/" > tmp
   mv tmp $b
   git add $b
 done

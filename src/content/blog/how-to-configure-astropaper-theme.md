@@ -44,7 +44,7 @@ Here are SITE configuration options
 | `author`              | Your name                                                                                                                                                                                                                                           |
 | `desc`                | Your site description. Useful for SEO and social media sharing.                                                                                                                                                                                     |
 | `title`               | Your site name                                                                                                                                                                                                                                      |
-| `ogImage`             | Your default OG image for the site. Useful for social media sharing. OG images can be an external image url or they can be placed under `/blogs/public` directory.                                                                                        |
+| `ogImage`             | Your default OG image for the site. Useful for social media sharing. OG images can be an external image url or they can be placed under `/public` directory.                                                                                        |
 | `lightAndDarkMode`    | Enable or disable `light & dark mode` for the website. If disabled, primary color scheme will be used. This option is enabled by default.                                                                                                           |
 | `postPerIndex`        | The number of posts to be displayed at the home page under `Recent` section.                                                                                                                                                                        |
 | `postPerPage`         | You can specify how many posts will be displayed in each posts page. (eg: if you set SITE.postPerPage to 3, each page will only show 3 posts per page)                                                                                              |
@@ -85,7 +85,7 @@ If you specify `LOGO_IMAGE.enable` => `false`, AstroPaper will automatically con
 
 If you specify `LOGO_IMAGE.enable` => `true`, AstroPaper will use the logo image as the site's main logo.
 
-You have to specify `logo.png` or `logo.svg` under `/blogs/public/assets` directory. Currently, only svg and png image file formats are supported. (**_Important!_** _logo name has to be logo.png or logo.svg)_
+You have to specify `logo.png` or `logo.svg` under `/public/assets` directory. Currently, only svg and png image file formats are supported. (**_Important!_** _logo name has to be logo.png or logo.svg)_
 
 If your logo image is png file format, you have to set `LOGO_IMAGE.svg` => `false`.
 
@@ -99,7 +99,7 @@ You can configure your own social links along with its icons.
 
 Currently 20 social icons are supported. (Github, LinkedIn, Facebook etc.)
 
-You can specify and enable certain social links in hero section and footer. To do this, go to `/blogs/src/config.ts` and then you'll find `SOCIALS` array of object.
+You can specify and enable certain social links in hero section and footer. To do this, go to `/src/config.ts` and then you'll find `SOCIALS` array of object.
 
 ```js
 // file: src/config.ts

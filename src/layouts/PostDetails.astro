@@ -31,7 +31,7 @@ const { Content } = await post.render();
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/blogs/posts/${slugifyStr(title)}.png`,
+  ogImageUrl ?? `/posts/${slugifyStr(title)}.png`,
   Astro.url.origin
 ).href;
 
@@ -116,7 +116,7 @@ const nextPost =
       {
         prevPost && (
           <a
-            href={`/blogs/posts/${prevPost.slug}`}
+            href={`/posts/${prevPost.slug}`}
             class="flex w-full gap-1 hover:opacity-75"
           >
             <svg
@@ -146,7 +146,7 @@ const nextPost =
       {
         nextPost && (
           <a
-            href={`/blogs/posts/${nextPost.slug}`}
+            href={`/posts/${nextPost.slug}`}
             class="flex w-full justify-end gap-1 text-right hover:opacity-75 sm:col-start-2"
           >
             <div>
