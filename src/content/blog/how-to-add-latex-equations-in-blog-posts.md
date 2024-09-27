@@ -57,7 +57,7 @@ import { LOCALE, SITE } from "@config";
 
 <!doctype html>
 <!-- others... -->
-<script is:inline src="/toggle-theme.js"></script>
+<script is:inline src="/blogs/toggle-theme.js"></script>
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
