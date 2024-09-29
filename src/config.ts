@@ -6,7 +6,7 @@ export const SITE: Site = {
   author: "Alejandro",
   profile: "https://github.com/a1exsDev",
   desc: "A blog built with AstroPaper",
-  title: "Debug Haven",
+  title: "Byte Blog",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -31,6 +31,13 @@ export const SOCIALS: SocialObjects = [
     name: "Github",
     href: "https://github.com/a1exsDev",
     linkTitle: ` ${SITE.title} on Github`,
+    active: true,
+  },
+  {
+    name: "RSS",
+    target: "_blank",
+    href: "/blogs/rss.xml",
+    linkTitle: `RSS Feed`,
     active: true,
   },
   {
